@@ -1,0 +1,115 @@
+.skills {
+  background: #1d1d24;
+  padding: 63px 0 70px;
+
+  .skills-title {
+    color: $white;
+    margin: 0 0 40px;
+  }
+
+  .skills-container {
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 64px;
+
+    .progress {
+      text-align: left;
+
+      .skills-subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        color: $color-text;
+      }
+
+      .progress-bar {
+        position: relative;
+        display: inline-block;
+        width: calc(80% - 53px);
+        height: 5px;
+        background: #969699;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: calc(100% - 54px);
+          height: 5px;
+          background: $light-red;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: calc(100% - 54px);
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: $light-red;
+
+            transform: translateY(-50%);
+        }
+      }
+
+      .percent {
+        font-weight: 500;
+        font-size: 18px;
+        color: $color-text;
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 20px;
+      }
+
+      &:nth-child(3) {
+        .progress-bar {
+          &::before {
+            width: calc(100% - 18px);
+          }
+
+          &::after {
+            left: calc(100% - 38px);
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .progress-bar {
+          &::before {
+            width: calc(100% - 78px);
+          }
+
+          &::after {
+            left: calc(100% - 98px);
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .progress-bar {
+          &::before {
+            width: calc(100% - 92px);
+          }
+
+          &::after {
+            left: calc(100% - 112px);
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .progress-bar {
+          &::before {
+            width: calc(100% - 24px);
+          }
+
+          &::after {
+            left: calc(100% - 44px);
+          }
+        }
+      }
+    }
+  }
+}

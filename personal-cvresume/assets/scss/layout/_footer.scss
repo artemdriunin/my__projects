@@ -1,0 +1,38 @@
+footer {
+  padding: 32px 0 27px;
+
+  .social {
+    @include flex-center;
+
+    li {
+      height: 21px;
+      padding: 0 15px;
+      border-right: 1px solid #cccccc;
+
+      &:last-child {
+          border: 0;
+      }
+
+      a {
+        display: block;
+        height: 100%;
+        width: 21px;
+        text-decoration: none;
+        background: url(https://i.imgur.com/zemzfvg.png) no-repeat;
+
+        @each $icon, $position in $social-bg {
+          &.#{$icon} {
+            background-position: $position;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+      font-weight: 500;
+      font-size: 14px;
+      color: #3e3e3e;
+      margin-top: 18px;
+  }
+}

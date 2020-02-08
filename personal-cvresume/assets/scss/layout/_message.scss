@@ -1,0 +1,81 @@
+.message {
+  padding: 80px 0 0;
+  
+  .container {
+    border-bottom: 1px solid $white-gray;
+    padding-bottom: 80px;
+  }
+
+  .message-wrapper {
+    position: relative;
+    @include grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 164px;
+
+    @media screen and (max-width: 767px) {
+      column-gap: 100px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      height: calc(100% - 78px);
+      width: 1px;
+      background: #ccc;
+
+      transform: translateY(-50%);
+    }
+
+    .message-item {
+      .message-title {
+        font-weight: 500;
+        font-size: 22px;
+        color: #3e3e3e;
+        text-align: left;
+      }
+
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .item-wrapper {
+        @include grid;
+        grid-template-columns: auto 1fr;
+        gap: 54px;
+        margin-bottom: 40px;
+
+        .item-icon {
+          width: 32px;
+          height: 32px;
+          background: url(https://i.imgur.com/xaA9ZGe.png) no-repeat;
+
+          @each $status, $position in $bg-positions {
+            &.#{$status} {
+              background-position: $position;
+            }
+          }
+        }
+
+        .item-text {
+          text-align: left;
+
+          h3 {
+            font-weight: 500;
+            font-size: 18px;
+            color: $info-title-color;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            color: #8d8d8d;
+          }
+        }
+      }
+    }
+  }
+}

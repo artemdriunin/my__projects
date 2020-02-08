@@ -1,0 +1,53 @@
+.about-me-container {
+  @include grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 64px;
+  text-align: left;
+  padding: 80px 0 85px;
+  border-bottom: 1px solid $white-gray;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .about-item {
+    .about-title {
+      @include title;
+      padding: 35px 0 15px;
+      margin: 0;
+    }
+
+    .about-text {
+      font-weight: 500;
+      font-size: 18px;
+      color: $grey-50;
+      line-height: 28px;
+      text-align: justify;
+    }
+
+    ul {
+      background: #f9f9f9;
+
+      li {
+        padding: 18px 0;
+        border-bottom: 1px solid #e0e0e0;
+        font-weight: 500;
+        font-size: 18px;
+        color: $info-title-color;
+
+        span {
+          font-weight: 600;
+          font-size: 18px;
+          color: $info-title-color;
+        }
+      }
+    }
+
+    .photo {
+      padding: 115px 50px;
+      background: $main-color;
+      height: 497px;
+    }
+  }
+}

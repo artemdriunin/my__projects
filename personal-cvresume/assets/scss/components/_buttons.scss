@@ -1,0 +1,58 @@
+.hire-btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  color: $white;
+  background: $light-red;
+}
+
+.btn-closse {
+  position: fixed;
+  display: block;
+  top: 5px;
+  left: 5px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform .3s linear;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 26px;
+    height: 4px;
+    background: $light-red;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &.show-aside {
+    transform: rotate(45deg);
+  }
+}
+
+.btn-message {
+  border: 0;
+  width: 25%;
+  padding: 10px 22px;
+  margin-top: 24px;
+  margin-left: auto;
+
+  @media screen and (max-width: 1140px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 792px) {
+    width: 100%;
+  }
+}

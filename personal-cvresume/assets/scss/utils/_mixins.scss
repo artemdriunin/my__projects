@@ -1,0 +1,78 @@
+// Flex 
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+// Grid
+
+@mixin grid {
+    display: grid;
+    align-items: center;
+}
+
+@mixin grid-center {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin grid-between {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin grid-around {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// Stretch img
+
+@mixin full-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+@mixin title {
+    position: relative;
+    font-weight: 600;
+    font-size: 32px;
+    color: $info-title-color;
+    margin: 0;
+    text-align: left;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        width: 75px;
+        height: 3px;
+        background: $light-red;
+    }
+}

@@ -1,0 +1,35 @@
+.intro {
+    padding: 113px 0;
+    background: $main-color;
+    border: 1px solid rgba(104, 104, 104, .2);
+
+    .main-title {
+        font-weight: 600;
+        color: $white;
+        font-size: 58px;
+        margin: 0;
+        letter-spacing: 2px;
+
+        @media screen and (max-width: 792px) {
+            font-size: 42px;
+        }
+    }
+
+    .intro-text {
+        color: $color-text;
+        font-weight: 500;
+        width: 60%;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 20px auto 50px;
+
+        @media screen and (max-width: 792px) {
+            width: 80%;
+        }
+    }
+
+    a {
+        padding: 15px 45px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,72 @@
+@import "./normalize.scss";
+@import "./_typography.scss";
+@import "./../utils/variables.scss";
+@import "./../utils/_mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.hide-aside {
+  .aside-container {
+    width: 0;
+
+    nav {
+      display: none;
+    }
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 30px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: 576px) {
+    max-width: 540px;
+  }
+}
+
+.main-content {
+  width: calc(100% - 275px);
+  margin-left: auto;
+  transition: width 0.3s linear;
+
+  @media screen and (max-width: 1420px) {
+    width: 100%;
+  }
+}
+
+.personal-container {
+  padding: 75px 0 85px;
+  border-bottom: 1px solid $white-gray;
+  text-align: left;
+}
+
+.main-subtitle {
+  @include title;
+  padding-bottom: 15px;
+  margin: 0 0 63px;
+}
