@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            outline: 0;
+            font-size: 18px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        #calc {
+            width: 250px;
+            padding: 4px;
+            border: 1px solid #000;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 6px;
+        }
+
+        #display {
+            grid-column: 1 / span 4;
+            padding-left: 25px;
+            padding-right: 4px;
+            text-align: right;
+            pointer-events: none;
+        }
+
+        #clearBtn {
+            grid-column: 1 / span 4;
+            background: transparent;
+            border: 1px solid #000;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .button,
+        #result {
+            border: 1px solid #000;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calc">
+        <input id="display" type="text" value="">
+        <input id="clearBtn" type="button" value="C">
+        <div class="button">7</div>
+        <div class="button">8</div>
+        <div class="button">9</div>
+        <div class="button">/</div>
+        <div class="button">4</div>
+        <div class="button">5</div>
+        <div class="button">6</div>
+        <div class="button">*</div>
+        <div class="button">1</div>
+        <div class="button">2</div>
+        <div class="button">3</div>
+        <div class="button">-</div>
+        <div class="button">0</div>
+        <div class="button">.</div>
+        <div id="result">=</div>
+        <div class="button">+</div>
+    </div>
+</body>
+
+<script>
+    const calc = document.getElementById('calc'),
+        display = document.getElementById('display'),
+        clearBtn = document.getElementById('clearBtn'),
+        buttons = document.querySelectorAll('.button'),
+        result = document.getElementById('result');
+
+    // clear display
+
+    clearBtn.addEventListener('click', () => display.value = '');
+
+    // functionality buttons
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            display.value = display.value + this.innerHTML;
+        });
+    });
+
+    // calculation result
+
+    result.addEventListener('click', () => display.value = eval(display.value));
+</script>
+
+</html>
