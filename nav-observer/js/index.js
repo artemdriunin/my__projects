@@ -5,7 +5,7 @@ function observer(selector, controlsSelector) {
 
         if (!controls[0].classList.contains('active')) controls[0].classList.add('active');
 
-        window.addEventListener("scroll", () => {
+        window.addEventListener('scroll', () => {
             const scrollTopValue = window.pageYOffset;
 
             const sectionsCordinate = {
