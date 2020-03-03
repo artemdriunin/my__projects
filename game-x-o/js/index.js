@@ -86,7 +86,7 @@ function initGame(options) {
                     stepCount = stepCount + 1;
 
                     if (isCheckWin()) {
-                        message.innerHTML = `Won: ${player}`;
+                        message.innerHTML = `Won: <span>${player}</span>`;
                         score[player] = score[player] + 1;
                         stepCount = 0;
                         paused = true;
