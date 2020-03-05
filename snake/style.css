@@ -1,0 +1,27 @@
+body {
+  height: 400px;
+  width: 400px;
+}
+#gamefield {
+  background-color: rgb(100, 100, 100);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#gamefield > div {
+  position: absolute;
+  background-color: green;
+}
+
+#gamefield > .wall {
+  background-color: brown;
+}
+
+#gamefield > .snake {
+  background-color: black;
+}
+#gamefield > .food {
+  background-color: yellow;
+  border-radius: 50%;
+}
