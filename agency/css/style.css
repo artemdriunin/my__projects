@@ -7162,8 +7162,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 .intro {
-  background: #f6f2f2;
-  padding-top: 20px; }
+  padding: 20px 0 170px; }
   .intro header {
     background: #313030;
     display: flex;
@@ -7180,7 +7179,8 @@ a.text-dark:hover, a.text-dark:focus {
         padding: 30px 25px;
         text-transform: uppercase;
         font-size: 12px;
-        font-weight: 700; }
+        font-weight: 700;
+        transition: .25s; }
         .intro header .nav .nav-item a:hover {
           background: #ff3f40; }
   .intro .main-title {
@@ -7195,32 +7195,15 @@ a.text-dark:hover, a.text-dark:focus {
       .intro .main-title {
         font-size: 32px;
         line-height: 42px; } }
-  .intro .intro-text {
-    color: #707070;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 65px;
-    padding-right: 105px; }
-    @media screen and (max-width: 992px) {
-      .intro .intro-text {
-        padding-right: 32px; } }
-    @media screen and (max-width: 768px) {
-      .intro .intro-text {
-        padding-right: 105px;
-        margin-bottom: 48px; } }
-  .intro .contact-btn {
+  .intro .--contact-us {
     background: #ff3f40;
     color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 54px;
-    text-align: center;
-    border: 0;
-    border-radius: 5px; }
+    border: 0; }
   .intro .video {
     padding: 175px;
     background: #c4c0b1;
-    box-shadow: 0 0 64px 0 #9c9c9c; }
+    box-shadow: 0 0 64px 0 #9c9c9c;
+    cursor: pointer; }
     .intro .video::before {
       content: "";
       display: block;
@@ -7245,7 +7228,50 @@ a.text-dark:hover, a.text-dark:focus {
       height: 64px;
       border-radius: 50%; }
 
-ul, ol {
+.info .--learn-more {
+  background: #fff;
+  color: #ff3f40;
+  border: 2px solid #ff3f40; }
+
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+main {
+  background: #f6f2f2; }
+
+.main-text {
+  color: #707070;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 65px;
+  padding-right: 105px; }
+  @media screen and (max-width: 992px) {
+    .main-text {
+      padding-right: 32px; } }
+  @media screen and (max-width: 768px) {
+    .main-text {
+      padding-right: 105px;
+      margin-bottom: 48px; } }
+
+.main-btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 54px;
+  text-align: center;
+  border-radius: 5px; }
+
+.sub-title {
+  text-transform: uppercase;
+  color: #333333;
+  font-weight: 700;
+  line-height: 46px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 16px; }
+  @media screen and (max-width: 992px) {
+    .sub-title {
+      font-size: 32px;
+      line-height: 42px; } }

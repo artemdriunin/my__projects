@@ -1,20 +1,68 @@
 // Fonts
-@import "fonts.scss";
+@import "fonts";
 
 // Mixins
-@import "mixins.scss";
+@import "mixins";
 
 // Utils
-@import "utils.scss";
+@import "utils";
 
 // Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Intro
-@import "intro.scss";
+@import "intro";
 
-ul, ol {
+// Info
+@import "info";
+
+ul,
+ol {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+main {
+    background: #f6f2f2;
+}
+
+.main-text {
+    color: $text-color;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 65px;
+    padding-right: 105px;
+
+    @media screen and (max-width: 992px) {
+        padding-right: 32px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-right: 105px;
+        margin-bottom: 48px;
+    }
+}
+
+.main-btn {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 54px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sub-title {
+    text-transform: uppercase;
+    color: $subtitle-color;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 992px) {
+        font-size: 32px;
+        line-height: 42px;
+    }
 }
