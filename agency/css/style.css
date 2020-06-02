@@ -7233,6 +7233,28 @@ a.text-dark:hover, a.text-dark:focus {
   color: #ff3f40;
   border: 2px solid #ff3f40; }
 
+.info .feature-title {
+  color: #4c4c4c;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 10px; }
+
+.info .icon-settings {
+  width: 40px;
+  height: 40px; }
+
+.info .icon-pencil {
+  width: 39px;
+  height: 37px; }
+
+.info .icon-diamond {
+  width: 40px;
+  height: 33px; }
+
+.info .icon-truck {
+  width: 44px;
+  height: 33px; }
+
 ul,
 ol {
   list-style: none;
@@ -7241,6 +7263,11 @@ ol {
 
 main {
   background: #f6f2f2; }
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
 .main-text {
   color: #707070;
