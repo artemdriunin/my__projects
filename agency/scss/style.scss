@@ -7,5 +7,14 @@
 // Utils
 @import "utils.scss";
 
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 // Intro
 @import "intro.scss";
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
