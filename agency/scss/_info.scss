@@ -1,15 +1,23 @@
 .info {
+    border-bottom: 1px solid rgba(148, 148, 148, .7);
+
     .--learn-more {
         background: #fff;
         color: $main-color;
         border: 2px solid $main-color;
     }
 
-    .feature-title {
-        color: #4c4c4c;
-        font-weight: 600;
-        font-size: 22px;
-        margin-bottom: 10px;
+    .feature-container {
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
+
+        .feature-title {
+            color: #4c4c4c;
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
     }
 
     @each $icon, $size in $icon-sizes {

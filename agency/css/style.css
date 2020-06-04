@@ -7228,32 +7228,76 @@ a.text-dark:hover, a.text-dark:focus {
       height: 64px;
       border-radius: 50%; }
 
-.info .--learn-more {
-  background: #fff;
-  color: #ff3f40;
-  border: 2px solid #ff3f40; }
+.info {
+  border-bottom: 1px solid rgba(148, 148, 148, 0.7); }
+  .info .--learn-more {
+    background: #fff;
+    color: #ff3f40;
+    border: 2px solid #ff3f40; }
+  @media screen and (max-width: 768px) {
+    .info .feature-container {
+      padding: 0; } }
+  .info .feature-container .feature-title {
+    color: #4c4c4c;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px; }
+  .info .icon-settings {
+    width: 40px;
+    height: 40px; }
+  .info .icon-pencil {
+    width: 39px;
+    height: 37px; }
+  .info .icon-diamond {
+    width: 40px;
+    height: 33px; }
+  .info .icon-truck {
+    width: 44px;
+    height: 33px; }
 
-.info .feature-title {
-  color: #4c4c4c;
-  font-weight: 600;
-  font-size: 22px;
-  margin-bottom: 10px; }
-
-.info .icon-settings {
-  width: 40px;
-  height: 40px; }
-
-.info .icon-pencil {
-  width: 39px;
-  height: 37px; }
-
-.info .icon-diamond {
-  width: 40px;
-  height: 33px; }
-
-.info .icon-truck {
-  width: 44px;
-  height: 33px; }
+.products {
+  padding: 105px 0 135px; }
+  .products .products-text {
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 40%;
+    margin: 0 auto; }
+    .products .products-text::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #ff3f40;
+      width: 20%;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+  .products .products-tab {
+    margin-top: 90px; }
+    .products .products-tab .tab-nav {
+      justify-content: space-evenly;
+      margin-bottom: 35px; }
+      .products .products-tab .tab-nav li {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #949494;
+        cursor: pointer; }
+        .products .products-tab .tab-nav li.active {
+          color: #ff3f40; }
+    .products .products-tab .tab-content {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 200px); }
+      .products .products-tab .tab-content.hide-content {
+        display: none; }
+      .products .products-tab .tab-content.show-content {
+        display: grid; }
+      .products .products-tab .tab-content .content-item {
+        padding: 50px;
+        background: rgba(148, 148, 148, 0.7); }
 
 ul,
 ol {
