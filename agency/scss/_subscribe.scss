@@ -1,0 +1,44 @@
+.subscribe {
+    padding: 135px 0;
+    background: rgba(148, 148, 148, .7);
+    text-align: center;
+
+    .subscribe-title {
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    .subscribe-text {
+        font-size: 16px;
+        color: #fff;
+        margin: 35px 0 60px;
+    }
+
+    form {
+        .subscribe-input {
+            background: #fff;
+            padding: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #7c7c7c;
+            border: 0;
+            border-radius: 6px;
+            flex-grow: .3;
+
+            &:hover,
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .--subscribe-btn {
+            background: $main-color;
+            color: #fff;
+            border: 0;
+            margin-left: 20px;
+            text-transform: uppercase;
+        }
+    }
+}

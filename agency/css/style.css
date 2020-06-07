@@ -7317,6 +7317,9 @@ a.text-dark:hover, a.text-dark:focus {
     position: relative;
     max-width: 35%;
     padding-bottom: 35px; }
+    @media screen and (max-width: 768px) {
+      .social .social-text {
+        max-width: 60%; } }
     .social .social-text::after {
       content: "";
       display: block;
@@ -7328,7 +7331,8 @@ a.text-dark:hover, a.text-dark:focus {
       bottom: 0; }
   .social .social-photo {
     padding: 200px 50px;
-    background: rgba(148, 148, 148, 0.7); }
+    background: rgba(148, 148, 148, 0.7);
+    max-height: 450px; }
   .social .describe-title {
     text-transform: uppercase;
     font-size: 24px;
@@ -7345,30 +7349,69 @@ a.text-dark:hover, a.text-dark:focus {
       cursor: pointer; }
       .social .social-categories li:first-child {
         margin-left: 0; }
-  .social .social-item {
-    position: relative;
-    padding: 97px;
-    background: rgba(148, 148, 148, 0.7);
-    margin-left: 15px;
-    cursor: pointer; }
-    .social .social-item:first-child {
-      margin-left: 0; }
-    .social .social-item:hover .categories-title {
-      opacity: 1; }
-    .social .social-item .categories-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 16px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: #fff;
-      background: #7a786e;
-      padding: 6px 0;
-      opacity: 0;
-      transition: .25s; }
+  .social .social-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 203px;
+    gap: 12px; }
+    @media screen and (max-width: 992px) {
+      .social .social-block {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 375px) {
+      .social .social-block {
+        grid-template-columns: 1fr; } }
+    .social .social-block .social-item {
+      position: relative;
+      background: rgba(148, 148, 148, 0.7);
+      padding: 0;
+      cursor: pointer; }
+      .social .social-block .social-item:hover .categories-title {
+        opacity: 1; }
+      .social .social-block .social-item .categories-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        background: #7a786e;
+        padding: 6px 0;
+        opacity: 0;
+        transition: .25s; }
+
+.subscribe {
+  padding: 135px 0;
+  background: rgba(148, 148, 148, 0.7);
+  text-align: center; }
+  .subscribe .subscribe-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff; }
+  .subscribe .subscribe-text {
+    font-size: 16px;
+    color: #fff;
+    margin: 35px 0 60px; }
+  .subscribe form .subscribe-input {
+    background: #fff;
+    padding: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7c7c7c;
+    border: 0;
+    border-radius: 6px;
+    flex-grow: .3; }
+    .subscribe form .subscribe-input:hover, .subscribe form .subscribe-input:focus {
+      outline: 0; }
+  .subscribe form .--subscribe-btn {
+    background: #ff3f40;
+    color: #fff;
+    border: 0;
+    margin-left: 20px;
+    text-transform: uppercase; }
 
 ul,
 ol {

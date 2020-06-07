@@ -6,6 +6,10 @@
         max-width: 35%;
         padding-bottom: 35px;
 
+        @media screen and (max-width: 768px) {
+            max-width: 60%;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -21,6 +25,7 @@
     .social-photo {
         padding: 200px 50px;
         background: rgba(148, 148, 148, .7);
+        max-height: 450px;
     }
 
     .describe-title {
@@ -47,37 +52,47 @@
         }
     }
 
-    .social-item {
-        position: relative;
-        padding: 97px;
-        background: rgba(148, 148, 148, .7);
-        margin-left: 15px;
-        cursor: pointer;
+    .social-block {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 203px;
+        gap: 12px;
 
-        &:first-child {
-            margin-left: 0;
+        @media screen and (max-width: 992px){
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        &:hover {
-            .categories-title {
-                opacity: 1;
+        @media screen and (max-width: 375px){
+            grid-template-columns: 1fr;
+        }
+
+        .social-item {
+            position: relative;
+            background: rgba(148, 148, 148, .7);
+            padding: 0;
+            cursor: pointer;
+    
+            &:hover {
+                .categories-title {
+                    opacity: 1;
+                }
             }
-        }
-
-        .categories-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%; 
-            text-align: center;
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: #fff;
-            background: #7a786e;
-            padding: 6px 0;
-            opacity: 0;
-            transition: .25s;
+    
+            .categories-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #fff;
+                background: #7a786e;
+                padding: 6px 0;
+                opacity: 0;
+                transition: .25s;
+            }
         }
     }
 }
